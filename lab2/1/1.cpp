@@ -8,7 +8,7 @@ int main() {
 		char ch = ' ';
 		string num1(20 - n, ch);
 		string num2(n, 'x');
-		string res = (num1 + num2)+ "\n";
+		string res = (num1 + num2) + "\n";
 		cout << res << endl;
 	}
 }
