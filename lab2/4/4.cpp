@@ -17,18 +17,17 @@ int main() {
 	cout << "Процентная ставка: ";
 	cin >> proc;
 	proc = proc / 100;
-	 double dolg = (price - vznos);
-	 dolg = dolg + proc * dolg;
-	 double yearplat = dolg / years;
-	 int num = 1;
-	for (int i =years; i!=1 ; i--){
-		double plat = 0;
-		plat = proc * dolg + yearplat;
-		cout << "Платёж за " << num << " год: " << plat << endl;
-		dolg = dolg - plat;
-		cout << "Долг: " << dolg << endl;
-		years--;
-		num++;
+	double m = years * 12;
+	double dolg = (price - vznos);
+	double mproc = proc / 12;
+	double plat = dolg * mproc / (1 - pow(1 + mproc, -m));
+	int pay = 0;
+	cout << "Ежемесячный платёж" << plat << endl;
+	for (int i = 1; i != years+1; i++) {
+		dolg = dolg - plat * 12;
+		double yplat = plat * 12;
+		pay = pay + yplat;
+		cout << "Выплата за " << i << "год: " << pay << endl;
 	}
-	cout << "Платёж за " << num << " год: " << dolg << endl;
+
 }
