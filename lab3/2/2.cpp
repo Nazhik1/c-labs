@@ -3,11 +3,11 @@ using namespace std;
 
 int main(){   
     setlocale(LC_ALL, "RUS");
-    enum etype { laborer = 'l', secretary = 's', manager = 'm', accountant='a', executive='e', researcher='r' };
+    enum etype { laborer = 'l', secretary = 's', manager = 'm', accountant='a', executive='e', researcher='r' }; // Создаём перечисление с профессиями и задаём каждой профессии первую букву как значение
     char a;
     cout << "Введите первую букву должности: ";
     cin >> a;
-    switch (a)
+    switch (a) // С помощью switch делаем проверку на совпадение введёнгого значения со значениями из перечисления и выводим результат
     {
         case etype::laborer:
             cout << "Полное название: laborer";
