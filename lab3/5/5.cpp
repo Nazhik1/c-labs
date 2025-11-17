@@ -4,11 +4,14 @@ int main(){
     setlocale(LC_ALL, "RUS");
     struct time { int hours; int minutes; int seconds; }; //Создаём структуру времени
     time t1, t2, t3;
-    char ch;
     cout << "Введите первое время: ";
-    cin >> t1.hours >> ch >> t1.minutes >> ch >> t1.seconds; // Вводим 2 времени 
+    cin >> t1.hours;
+    cin >> t1.minutes;
+    cin >> t1.seconds; // Вводим 2 времени 
     cout << "Введите второе время: ";
-    cin >> t2.hours >> ch >> t2.minutes >> ch >> t2.seconds;
+    cin >> t2.hours;
+    cin >> t2.minutes;
+    cin >> t2.seconds;
     long totalsecs1 = t1.hours * 3600 + t1.minutes * 60 + t1.seconds; //Переводим их в секунды
     long totalsecs2 = t2.hours * 3600 + t2.minutes * 60 + t2.seconds;
     long totalsecs = totalsecs1 + totalsecs2; //Считаем сумму времени и переводим обратно в формат структуры
