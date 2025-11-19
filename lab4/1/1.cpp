@@ -1,7 +1,7 @@
-ï»¿#include<iostream>;
+#include<iostream>;
 using namespace std;
 
-long hms_to_secs(int h, int m, int s ) {
+long hms_to_secs(int h, int m, int s) {
 	long res = h * 3600 + m * 60 + s;
 	return res;
 }
@@ -11,7 +11,7 @@ int main() {
 	int h, m, s;
 	int a = 1;
 	while (a > 0) {
-		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ€ÐµÐ¼Ñ:";
+		cout << "Ââåäèòå âðåìÿ:";
 		cin >> h >> m >> s;
 		cout << hms_to_secs(h, m, s) << endl;
 	}
