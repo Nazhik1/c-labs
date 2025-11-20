@@ -7,10 +7,11 @@ int main() {
 	int size;
 	cout << "Введите кол-во элементов:";
 	cin >> size;
+	char ch;
 	fraction* a = new fraction[size];
 	cout << "Введите элементы: " << endl;
 	for (int i = 0; i < size; i++) {
-		cin >> a[i].chis >> a[i].znam;
+		cin >> a[i].chis >> ch >> a[i].znam;
 	}
 	double sr=0;
 	for (int i = 0; i < size; i++) {
