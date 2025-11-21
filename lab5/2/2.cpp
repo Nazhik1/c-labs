@@ -10,7 +10,7 @@ void maxint(int a[], int size) {
 			max_i = i;
 		}
 	}
-	cout << max << endl << max_i;
+	cout << "Наибольший элемент: " << max << endl << "Номер: " << max_i;
 }
 
 int main() {

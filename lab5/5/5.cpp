@@ -18,11 +18,9 @@ double sr(Distance a[5], int n) {
 int main() {
 	setlocale(LC_ALL, "RUS");
 	cout << "¬ведите данные: " << endl;
-	cin >> a[0].f >> a[0].d;
-	cin >> a[1].f >> a[1].d;
-	cin >> a[2].f >> a[2].d;
-	cin >> a[3].f >> a[3].d;
-	cin >> a[4].f >> a[4].d;
+	for (int i = 0; i < 5; i++) {
+		cin >> a[i].f >> a[i].d;
+	}
 	double s = sr(a, n);
 	cout << s;
 }
