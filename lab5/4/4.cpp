@@ -1,22 +1,60 @@
 #include<iostream>;
+#include <string>;
 using namespace std;
 
-struct employee { char name[2]; long id; };
+struct employee { char name[20]; long id; };
 
 employee a[3];
 
 void getdata() {
-	cout << "Введите данные: " << endl;
-	cin >> a[0].name[0] >> a[0].name[1] >> a[0].id;
-	cin >> a[1].name[0] >> a[1].name[1] >> a[1].id;
-	cin >> a[2].name[0] >> a[2].name[1] >> a[2].id;
+	string s;
+	cout << "Введите имя: " << endl;
+	cin.get();
+	getline(cin, s);
+	for (int i = 0; i < s.size(); i++) {
+		a[0].name[i] = s[i];
+	}
+	cout << "Введите номер:" << endl;
+	cin >> a[0].id;
+
+	cout << "Введите имя: " << endl;
+	cin.get();
+	getline(cin, s);
+	for (int i = 0; i != s.size(); i++) {
+		a[1].name[i] = s[i];
+	}
+	cout << "Введите номер:" << endl;
+	cin >> a[1].id;
+
+	cout << "Введите имя: " << endl;
+	cin.get();
+	getline(cin, s);
+	for (int i = 0; i < s.size(); i++) {
+		a[2].name[i] = s[i];
+	}
+	cout << "Введите номер:" << endl;
+	cin >> a[2].id;
 
 }
 
 void putdata() {
-	cout << "Сотрудник ID:" << a[0].id << " Имя: " << a[0].name[0] << " " << a[0].name[1] << endl;
-	cout << "Сотрудник ID:" << a[1].id << " Имя: " << a[1].name[0] << " " << a[1].name[1] << endl;
-	cout << "Сотрудник ID:" << a[2].id << " Имя: " << a[2].name[0] << " " << a[2].name[1] << endl;
+	string s="";
+	for (int i = 0; i != sizeof(a[0].name); i++) {
+		s =s + a[0].name[i];
+	}
+	cout << "Сотрудник ID:" << a[0].id << " Имя: " << s << endl;
+
+	s = "";
+	for (int i = 0; i != sizeof(a[1].name); i++) {
+		s = s + a[1].name[i];
+	}
+	cout << "Сотрудник ID:" << a[1].id << " Имя: " << s << endl;
+
+	s = "";
+	for (int i = 0; i != sizeof(a[2].name); i++) {
+		s = s + a[2].name[i];
+	}
+	cout << "Сотрудник ID:" << a[2].id << " Имя: " << s << endl;
 }
 
 int main() {
